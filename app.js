@@ -25,4 +25,9 @@ app.listen(process.env.PORT, error => {
 
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms'));
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static('styles'));
+app.use('/styles', express.static('styles'));
+
+app.get('/', (req, res) => {
+    const title = 'Главная';
+    res.render(createPath('index'), { title });
+});

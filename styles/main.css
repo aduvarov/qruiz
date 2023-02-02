@@ -1,0 +1,148 @@
+html {
+    height: 100%;
+}
+body {
+    background-color: #393e41;
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    height: 80px;
+}
+.header__navigation {
+    padding-left: 20px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 78px;
+    color: #44bba4;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.59);
+}
+.header__title {
+}
+.main {
+    flex: 1 0 auto;
+}
+.main__title {
+    font-family: 'Yanone Kaffeesatz';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 96px;
+    text-align: center;
+    letter-spacing: 0.075em;
+    color: #e94f37;
+    text-shadow: 0px 4px 7px rgba(0, 0, 0, 0.9);
+}
+.main__technoTitle {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #f6f7eb;
+}
+.main__technoContainer {
+    width: 858px;
+    height: 259px;
+    background: #3f88c5;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+.main__technoContainer a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.main__technoItem {
+    width: 130px;
+    height: 30px;
+    font-family: 'PT Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #e7d2d2;
+    background: #393e41;
+    border-radius: 10px;
+    transition: transform 0.2s linear;
+}
+
+.main__technoItem:hover {
+    transform: scale(1.1);
+}
+
+.footer {
+    height: 50px;
+    background: #3c6383;
+    display: flex;
+    justify-content: space-between;
+}
+.footer__city {
+    display: block;
+    height: 100%;
+    width: 180px;
+    font-family: 'Montserrat';
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: #f6f7eb;
+}
+.footer__site {
+    display: block;
+    height: 100%;
+    width: 180px;
+    font-family: 'Montserrat';
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f6f7eb;
+}
+
+@media (max-width: 600px) {
+    .header {
+        height: 80px;
+    }
+    .header__navigation {
+        padding-left: 10px;
+        font-size: 32px;
+    }
+    .main__title {
+        font-size: 36px;
+    }
+    .main__technoTitle {
+        margin-top: 50px;
+        font-size: 16px;
+    }
+    .main__technoContainer {
+        width: 95%;
+    }
+    .main__technoItem {
+    }
+    .footer {
+        height: 30px;
+    }
+    .footer__city {
+    }
+    .footer__site {
+    }
+}
