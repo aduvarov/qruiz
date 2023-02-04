@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <%- include ('./partials/head.ejs') %>
+    <body>
+        <%- include('./partials/header.ejs') %>
+
+        <main class="main">
+            <h1 class="main__title">JavaScript</h1>
+            <h2 class="main__qruizTitle">Основы</h2>
+            <form class="main__qruizContainer qruiz">
+                <h3 class="qruiz__title">В каком году был изобретён язык JavaScript?</h3>
+                <div class="qruiz__content">
+                    <label>
+                        <input type="radio" name="js_yearOfBirth" id="js_yearOfBirth" /> 1995
+                    </label>
+                    <label>
+                        <input type="radio" name="js_yearOfBirth" id="js_yearOfBirth" /> 1989
+                    </label>
+                    <label>
+                        <input type="radio" name="js_yearOfBirth" id="js_yearOfBirth" /> 1990
+                    </label>
+                    <label>
+                        <input type="radio" name="js_yearOfBirth" id="js_yearOfBirth" /> 2001
+                    </label>
+                    <label>
+                        <input type="radio" name="js_yearOfBirth" id="js_yearOfBirth" /> 1967
+                    </label>
+                </div>
+            </form>
+            <div class="qruizControls">
+                <button class="qruizControls__button qruizControls__button-prev">Предыдущий</button>
+                <button class="qruizControls__button qruizControls__button-stop">Завершить</button>
+                <button class="qruizControls__button qruizControls__button-next">Следующий</button>
+            </div>
+        </main>
+
+        <%- include('./partials/footer.ejs') %>
+    </body>
+</html>

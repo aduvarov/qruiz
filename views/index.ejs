@@ -2,11 +2,7 @@
 <html lang="ru">
     <%- include ('./partials/head.ejs') %>
     <body>
-        <header class="header">
-            <nav class="header__navigation">
-                <div class="header__title">QRUIZ контроль</div>
-            </nav>
-        </header>
+        <%- include('./partials/header.ejs') %>
 
         <main class="main">
             <h1 class="main__title">Система тестирования</h1>
@@ -19,9 +15,6 @@
             </div>
         </main>
 
-        <footer class="footer">
-            <div class="footer__city">Караганда</div>
-            <div class="footer__site">devlab.kz</div>
-        </footer>
+        <%- include('./partials/footer.ejs') %>
     </body>
 </html>

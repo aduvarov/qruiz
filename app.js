@@ -3,6 +3,7 @@ const morgan = require('morgan');
 const chalk = require('chalk');
 const mongoose = require('mongoose');
 const createPath = require('./helpers/createPath.js');
+const jsRoutes = require('./routes/jsRoutes.js');
 const express = require('express');
 const app = express();
 
@@ -31,3 +32,5 @@ app.get('/', (req, res) => {
     const title = 'Главная';
     res.render(createPath('index'), { title });
 });
+
+app.use('/technology', jsRoutes);
