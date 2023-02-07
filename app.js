@@ -19,14 +19,14 @@ mongoose
     .catch(error => console.error(errorMsg(error)));
 
 app.listen(process.env.PORT, error => {
-    error
-        ? console.log(errorMsg(error))
-        : console.log(successMsg(`Server running on port ${process.env.PORT}`));
+    error ? console.log(errorMsg(error)) : console.log(successMsg(`Server running on port ${process.env.PORT}`));
 });
 
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms'));
 app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 app.use('/styles', express.static('styles'));
+app.use('/scripts', express.static('scripts'));
 
 app.get('/', (req, res) => {
     const title = 'Главная';

@@ -6,32 +6,33 @@
 
         <main class="main">
             <h1 class="main__title">JavaScript</h1>
-            <h2 class="main__qruizTitle">Основы</h2>
-            <form class="main__qruizContainer qruiz">
-                <h3 class="qruiz__title">В каком году был изобретён язык JavaScript?</h3>
-                <div class="qruiz__content">
-                    <label>
-                        <input type="radio" name="js_yearOfBirth" id="js_yearOfBirth" /> 1995
-                    </label>
-                    <label>
-                        <input type="radio" name="js_yearOfBirth" id="js_yearOfBirth" /> 1989
-                    </label>
-                    <label>
-                        <input type="radio" name="js_yearOfBirth" id="js_yearOfBirth" /> 1990
-                    </label>
-                    <label>
-                        <input type="radio" name="js_yearOfBirth" id="js_yearOfBirth" /> 2001
-                    </label>
-                    <label>
-                        <input type="radio" name="js_yearOfBirth" id="js_yearOfBirth" /> 1967
-                    </label>
+            <h2 class="main__qruizTitle"><%- partition %></h2>
+            <form class="qruiz" action="/technology/javascript" method="post">
+                <div class="qruiz__container">
+                    <% questions.forEach((question, index) => { %> 
+                        <div class=
+                            <%if(index === 0) { %>
+                                "qruiz__question qruiz__question_active"
+                            <% } else { %>
+                                "qruiz__question"
+                            <% } %> >
+                        <div class="qruiz__title"><%= question.question %></div>
+                        <div class="qruiz__answers">
+                            <% question.answers.forEach(variant => {%>
+                                <label class="qruiz__variant">
+                                    <input type="radio" name="<%- question._id %>" value="<%- variant._id %>" /> <%- variant.answer %>
+                                </label>
+                            <% }) %>
+                        </div>
+                        </div>
+                    <% }) %> 
+                </div>
+                <div class="qruizControls">
+                    <button class="qruizControls__button qruizControls__button-prev qruizControls__button_disabled" type="button" disabled>Предыдущий</button>
+                    <button class="qruizControls__button qruizControls__button-stop" type="submit">Завершить</button>
+                    <button class="qruizControls__button qruizControls__button-next" type="button">Следующий</button>
                 </div>
             </form>
-            <div class="qruizControls">
-                <button class="qruizControls__button qruizControls__button-prev">Предыдущий</button>
-                <button class="qruizControls__button qruizControls__button-stop">Завершить</button>
-                <button class="qruizControls__button qruizControls__button-next">Следующий</button>
-            </div>
         </main>
 
         <%- include('./partials/footer.ejs') %>
